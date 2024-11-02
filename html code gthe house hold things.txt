@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Household Items - HOVE Supermarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .product {
+            flex: 1 1 calc(25% - 1rem);
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin-top: 0.5rem;
+            color: #333;
+        }
+        .product p {
+            color: #777;
+        }
+        .product-actions {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        .add-to-cart {
+            background-color: #4CAF50;
+        }
+        .buy-now {
+            background-color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Household Items</h1>
+    <p>Explore our selection of household essentials at HOVE Supermarket.</p>
+</header>
+
+<div class="container">
+    <section class="products-grid">
+        <div class="product">
+            <img src="sunlight.jpeg" alt="Laundry Detergent">
+            <h3>Laundry Detergent</h3>
+            <p>$8.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Laundry Detergent')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Laundry Detergent')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="vim.jpeg" alt="Dish Soap">
+            <h3>Dish Soap</h3>
+            <p>$2.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Dish Soap')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Dish Soap')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="paper.jpeg" alt="Paper Towels">
+            <h3>Paper Towels</h3>
+            <p>$4.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Paper Towels')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Paper Towels')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="broom.jpeg" alt="Toilet Paper">
+            <h3>Brooms</h3>
+            <p>$6.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Toilet Paper')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Toilet Paper')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="tooth.jpeg" alt="Cleaning Spray">
+            <h3>Signal tootthpaste</h3>
+            <p>$3.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Cleaning Spray')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Cleaning Spray')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="spoons.jpeg" alt="Sponges">
+            <h3>Spoons</h3>
+            <p>$1.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Kitchen Sponges')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Kitchen Sponges')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="garbage.jpeg" alt="Garbage Bags">
+            <h3>Garbage Bags</h3>
+            <p>$5.99</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Garbage Bags')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Garbage Bags')">Buy Now</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function addToCart(productName) {
+        alert(productName + " has been added to your cart.");
+    }
+
+    function buyNow(productName) {
+        alert("You are buying " + productName + " now.");
+        // Redirect to checkout page logic can go here
+    }
+</script>
+
+</body>
+</html>

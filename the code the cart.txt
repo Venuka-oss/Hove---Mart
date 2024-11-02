@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - HOVE Supermarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .cart-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Your Cart</h1>
+<div id="cart-items"></div>
+<p><strong>Total:</strong> $<span id="total-price">0.00</span></p>
+
+<script>
+    // Load cart items from local storage
+    function loadCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsDiv = document.getElementById('cart-items');
+        const totalPriceSpan = document.getElementById('total-price');
+        let total = 0;
+
+        // Clear previous cart items in case of reloading
+        cartItemsDiv.innerHTML = '';
+
+        // Loop through items and display them
+        cart.forEach((item, index) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'cart-item';
+            itemDiv.innerHTML = `
+                <p><strong>${item.name}</strong> - $${item.price.toFixed(2)}</p>
+                <button onclick="removeFromCart(${index})">Remove</button>
+            `;
+            cartItemsDiv.appendChild(itemDiv);
+            total += item.price;
+        });
+
+        // Update total price
+        totalPriceSpan.textContent = total.toFixed(2);
+    }
+
+    // Remove an item from the cart
+    function removeFromCart(index) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1); // Remove item by index
+        localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
+        loadCart(); // Reload the cart display
+    }
+
+    // Load cart on page load
+    window.onload = loadCart;
+</script>
+
+</body>
+</html>

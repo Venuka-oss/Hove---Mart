@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cricket Updates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+        }
+        .update-section {
+            padding: 20px;
+        }
+        .cricket-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .match {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+        }
+        .match img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Live Cricket Updates</h1>
+        <p>Stay updated with the latest cricket scores and news</p>
+    </div>
+
+    <div class="update-section">
+        <h2>Latest Matches</h2>
+        <div class="cricket-info">
+            <div class="match" id="match1">
+                <img src="https://example.com/cricket_image1.jpg" alt="Cricket Match 1">
+                <h3>Match 1: Team A vs Team B</h3>
+                <p id="score1">Score: Loading...</p>
+            </div>
+            <div class="match" id="match2">
+                <img src="https://example.com/cricket_image2.jpg" alt="Cricket Match 2">
+                <h3>Match 2: Team C vs Team D</h3>
+                <p id="score2">Score: Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // This is where you would connect to a live cricket API
+        // For example purposes, we’re using a mock function
+        function fetchCricketScores() {
+            document.getElementById("score1").innerText = "Team A 250/8";
+            document.getElementById("score2").innerText = "Team C 200/6";
+        }
+
+        // Update scores every 30 seconds
+        setInterval(fetchCricketScores, 30000);
+        fetchCricketScores(); // Initial call to load scores immediately
+    </script>
+</body>
+</html>

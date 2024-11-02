@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish and Meat - HOVE Supermarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .product {
+            flex: 1 1 calc(25% - 1rem);
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin-top: 0.5rem;
+            color: #333;
+        }
+        .product p {
+            color: #777;
+        }
+        .product-actions {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        .add-to-cart {
+            background-color: #4CAF50;
+        }
+        .buy-now {
+            background-color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fish and Meat</h1>
+    <p>Browse our fresh selection of fish and meat at HOVE Supermarket.</p>
+</header>
+
+<div class="container">
+    <section class="products-grid">
+        <div class="product">
+            <img src="salmon.jpeg" alt="Salmon">
+            <h3>Fresh Salmon</h3>
+            <p>$10.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Fresh Salmon')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Fresh Salmon')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="tuna.jpeg" alt="Tuna">
+            <h3>Tuna Steak</h3>
+            <p>$12.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Tuna Steak')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Tuna Steak')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="isso.jpeg" alt="Shrimp">
+            <h3>Jumbo Shrimp</h3>
+            <p>$15.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Jumbo Shrimp')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Jumbo Shrimp')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="chiken.jpeg" alt="Chicken">
+            <h3>Chicken Breast</h3>
+            <p>$4.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Chicken Breast')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Chicken Breast')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="beef.jpeg" alt="Beef">
+            <h3>Beef Steak</h3>
+            <p>$9.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Beef Steak')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Beef Steak')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="pork.jpeg" alt="Pork">
+            <h3>Pork Chops</h3>
+            <p>$6.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Pork Chops')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Pork Chops')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="lamb.jpeg" alt="Lamb">
+            <h3>Lamb Chops</h3>
+            <p>$14.99 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Lamb Chops')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Lamb Chops')">Buy Now</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function addToCart(productName) {
+        alert(productName + " has been added to your cart.");
+    }
+
+    function buyNow(productName) {
+        alert("You are buying " + productName + " now.");
+        // Redirect to checkout page logic can go here
+
+    }
+</script>
+
+
+</body>
+</html>

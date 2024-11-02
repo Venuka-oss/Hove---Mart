@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Downloads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .movie {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .movie img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .movie h3 {
+            font-size: 1.2em;
+        }
+        .movie a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Movie Downloads</h1>
+    <p>Download legally available or public domain movies</p>
+</header>
+
+<div class="movie-container">
+    <div class="movie">
+        <img src="https://via.placeholder.com/150" alt="Movie Poster">
+        <h3>Movie Title 1</h3>
+        <p>Genre: Action</p>
+        <a href="https://example.com/movie1-download-link" download>Download Movie</a>
+    </div>
+    <div class="movie">
+        <img src="https://via.placeholder.com/150" alt="Movie Poster">
+        <h3>Movie Title 2</h3>
+        <p>Genre: Comedy</p>
+        <a href="https://example.com/movie2-download-link" download>Download Movie</a>
+    </div>
+    <!-- Add more movie sections as needed -->
+</div>
+
+</body>
+</html>

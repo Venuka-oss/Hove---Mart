@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitsy and Vegetables - HOVE Supermarket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .product {
+            flex: 1 1 calc(25% - 1rem);
+            background-color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin-top: 0.5rem;
+            color: #333;
+        }
+        .product p {
+            color: #777;
+        }
+        .product-actions {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        .add-to-cart {
+            background-color: #4CAF50;
+        }
+        .buy-now {
+            background-color: #FF5733;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fruits and Vegetables</h1>
+    <p>Discover our fresh selection of fruits and vegetables at HOVE Supermarket.</p>
+</header>
+
+<div class="container">
+    <section class="products-grid">
+        <div class="product">
+            <img src="apple.jpeg" alt="Apples">
+            <h3>Fresh Apples</h3>
+            <p>Rs.250 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Fresh Apples')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Fresh Apples')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="banana.jpeg" alt="Bananas">
+            <h3>Organic Bananas</h3>
+            <p>Rs.100/ lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Organic Bananas')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Organic Bananas')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="carrot.jpeg" alt="Carrots">
+            <h3>Carrots</h3>
+            <p>Rs.120 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Carrots')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Carrots')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="tomatoes.jpeg" alt="Tomatoes">
+            <h3>Tomatoes</h3>
+            <p>Rs.30 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Tomatoes')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Tomatoes')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="oranges.jpeg" alt="Oranges">
+            <h3>Oranges</h3>
+            <p>Rs.100 / lb</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Oranges')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Oranges')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="spinach.jpeg" alt="Spinach">
+            <h3>Spinach</h3>
+            <p>Rs.50 / bunch</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Spinach')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Spinach')">Buy Now</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="bellpepers.jpeg" alt="Bell Peppers">
+            <h3>Bell Peppers</h3>
+            <p>Rs.300 each</p>
+            <div class="product-actions">
+                <button class="btn add-to-cart" onclick="addToCart('Bell Peppers')">Add to Cart</button>
+                <button class="btn buy-now" onclick="buyNow('Bell Peppers')">Buy Now</button>
+            </div>
+        </div>
+    </section>
+</div>
+<h4><botton><a href="cart.html">Go to cart</a></botton></h4>
+<script>
+    function addToCart(productName) {
+        alert(productName + " has been added to your cart.");
+    }
+
+    function buyNow(productName) {
+        alert("You are buying " + productName + " now.");
+        // Redirect to checkout page logic can go here
+    }
+</script>
+
+</body>
+</html>
