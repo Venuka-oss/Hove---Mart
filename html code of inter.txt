@@ -63,6 +63,12 @@
             text-align: center;
         }
         .category img, .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+         .category img, .other services img {
             width: 100%;
             height: 150px;
             object-fit: cover;
@@ -116,17 +122,27 @@
 
     <!-- Featured Products Section -->
     <section class="products">
-       <ul> <li><h2>Featured Products</h2></li></ul>
+       <h2><ul> <li>Other services</li></ul></h2>
         <div class="products-grid">
             <div class="product">
-                <img src="cric.webp" alt="Product 1">
-                <h3>cric updates</h3>
-                <p>$3.99 / lb</p>
+                <img src="cric.webp" alt="Product 1" height="100" width ="100" >
+                <h3><a href="cricinfo.html">Cricket Informations</a></h3>
+                
             </div>
             <div class="product">
+                <img src="harry.jpeg" alt="Product 2">
+                <h3> <a href ="movie.html">Movies</a></h3>
+                
+            </div>
+             <div class="product">
                 <img src="https://via.placeholder.com/150" alt="Product 2">
-                <h3>Fresh Milk</h3>
-                <p>$1.99 / bottle</p>
+                <h3>coming soon</h3>
+               
+            </div>
+             <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h3>coming soon</h3>
+              
             </div>
             
         </div>
