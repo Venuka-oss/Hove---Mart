@@ -103,7 +103,7 @@
         <div class="categories-grid">
             <div class="category">
                 <img src="F and B.jpeg" alt="Fresh bananas" width="150" height="150">
-                <h3><a href="section of fruits.html">Fruits & Vegetables</a></h3>
+                <h3><a href="section of fruits.html">Fruits & Vegetable</a></h3>
             </div>
             <div class="category">
                 <img src="dairy.jpeg" alt="Dairy Products">
